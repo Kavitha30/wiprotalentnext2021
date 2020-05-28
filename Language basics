@@ -1,0 +1,43 @@
+COMMAND LINE ARGUMENTS
+
+(1)  class A
+{
+ public static void main(String args[])
+ {
+  System.out.println(args[0] + “ technologies ”);
+  System.out.println(args[1]);
+  }
+}
+
+
+
+(2) class A
+{
+ public static void main(String args[])
+ {
+  System.out.println("Welcome"+args[0]);
+  }
+ }
+ 
+ 
+(3)class sum
+{
+      public static void main(String ar[])
+      {
+            int x,y,s;
+            x=Integer.parseInt(ar[0]);
+            y=Integer.parseInt(ar[1]);
+            s=x+y;
+            System.out.println("The sum of " + x + " and " + y +" is " +s);
+      }
+}
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
