@@ -122,5 +122,68 @@ public static void main(String args[])
 }
 
     
+ Write a program to accept gender ("Male" or "Female") and age (1-120) from command line
+arguments and print the percentage of interest based on the given conditions.
+
+
+
+import java.util.*;
+public classs Interest{
+public static void main(String args[])
+{
+  System.out.println("Enter the Gender:"+args[0]);
+  System.out.println("Enter the age:"+args[1]);
+  String s1=args[0];
+  int a1=Integer.parseInt(args[1]);
+  if(s1=="Female" && (a1>=1 && a1<=58))
+  {
+    System.out.println("8.2");
+  }
+  else if(s1=="Female" && (a1>=59 && a1>=120))
+  {
+    System.out.println("7.6");
+  }
+  else if(s1=="Male" && (a1>=1 && a1>=60))
+  {
+    System.out.println("9.2");
+  }
+  else if(s1=="Male" && (a1>=61 && a1>=120))
+  {
+    System.out.println("8.3");
+  }
+  else
+  {
+   System.out.println("no interest");
+  }
+ }
+}
+
+
+Write a program to convert from upper case to lower case and vice versa of an alphabet and print
+the old character and new character.
+
+
+import java.util.*;
+public class alpha
+{
+ public static void main(String args[])
+ {
+  Scanner sc=new Scanner(System.in);
+  System.out.println("enter the character");
+  char ch=sc.next().charAt(0);
+  if(ch<=65 && ch>=6)
+  {
+    char ch1=Character.toLowercase(ch);
+    System.out.println(ch+"->"+ch1);
+  }
+  else
+  {
+    System.out.println(ch+"->"+ch.toUppercase(ch));
+  }
+ }
+}
+
+
+
   
        
