@@ -25,6 +25,37 @@ public class Sum_Average
 }
 
 
+Write a program to initialize an integer array with values and check if a given number is present in
+the array or not. If the number is not found, it will print -1 else it will print the index value of the
+given number in the array.
+
+
+import java.util.*;;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner sc=new Scanner(System.in);
+		int array[]=new int[]{1,2,3,4};
+		int num,flag=0;
+		System.out.println("Enter the number to found");
+		num=sc.nextInt();
+		for(int i=0;i<array.length;i++)
+		{
+		    if(array[i]==num)
+		    {
+		       System.out.println(i);
+		       flag=1;
+		    }
+		    
+		}
+		if(flag==0)
+		{
+		    System.out.println(-1);
+		}
+	}
+}
+
+
 
 Write a program to initialize an integer array and find the maximum and minimum value of an
 array.
@@ -60,10 +91,53 @@ class MinMaxExample
 }
 
 
+Write a program to print the sum of the elements of the array with the given below condition. If
+the array has 6 and 7 in succeeding orders, ignore 6 and 7 and the numbers between them for the
+calculation of sum.
 
 
-
-
+import java .io.*; 
+  
+class GFG 
+{ 
+static void sumexcludingrange(int li[], 
+                              int a, int b) 
+{ 
+    int sum = 0; 
+    boolean add = true; 
+      
+    // loop in li 
+    for (int i = 0;  
+             i < li.length; i++) 
+    { 
+          
+        // if no != a then add 
+        if (li[i] != a &&  
+             add == true) 
+            sum = sum + li[i]; 
+              
+        // mark when a  
+        // and b are found  
+        else if (li[i] == a) 
+            add = false; 
+        else if( li[i] == b) 
+            add = true; 
+    } 
+      
+    // print sum 
+    System.out.print(sum); 
+} 
+  
+// Driver Code 
+public static void main(String[] args) 
+{ 
+    int lis[] = {1, 2, 4, 5, 6}; 
+    int a = 2; 
+    int b = 5; 
+      
+    sumexcludingrange(lis, a, b); 
+} 
+} 
 
 
 
