@@ -1,0 +1,133 @@
+Given a string, return a version without the first and last char, so "Wipro" yields "ipr". The string length will be at least 2.
+ 
+
+public class Assignment5 {
+
+	public static void main(String[] args) {
+		String str = "Wipro";
+		
+		str = str.substring(1, str.length() - 1);
+		
+		System.out.println(str);
+	}
+
+}
+
+
+Given a string of even length, return the first half. So the string "CatDog" yields "Cat". If the string
+length is odd number then return null.
+
+
+
+import java.util.Scanner;
+
+public class String4 {
+
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+        Scanner sc= new Scanner(System.in);
+        String abc= sc.nextLine();
+       
+        String bcd=null;
+        int lenght=abc.length();
+        int n=lenght/2;
+        if(lenght%2==0)
+        { bcd="";
+            for(int i=0;i<n;i++){
+                bcd=bcd+abc.charAt(i);
+               
+            }
+            System.out.print(bcd);
+        }
+        else
+        System.out.println(bcd);
+        sc.close();
+    }
+
+}
+
+
+
+Given a string, return a new string made of n copies of the first 2 chars of the original string where
+n is the length of the string. The string may be any length. If there are fewer than 2 chars, use
+whatever is there.
+
+
+import java.util.Scanner;
+
+public class String3 {
+
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+        Scanner sc= new Scanner(System.in);
+        String next="";
+        System.out.println("Enter the string");       
+        String abc= sc.nextLine();
+        int lenght =abc.length();
+        if(lenght<=1){
+            next=abc;
+           
+        }
+        else{
+            for (int i=0;i<lenght;i++){
+                next=next+abc.charAt(0)+abc.charAt(1);
+            }
+        }
+        System.out.print(next);
+    sc.close();
+
+    }
+
+}
+
+
+Given 2 strings, a and b, return a string of the form short+long+short, with the shorter string on
+the outside and the longer string on the inside. The strings will not be the same length, but they
+may be empty (length 0). If input is "hi" and "hello", then output will be "hihellohi".
+
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+/* Name of the class has to be "Main" only if the class is public. */
+class Ideone
+{
+    public static void main (String[] args) throws java.lang.Exception
+    {
+        // your code goes here
+        Scanner scanner = new Scanner(System.in);
+        String a = scanner.next();
+        String b = scanner.next();
+        if(a.length() > b.length())
+        System.out.println(b+a+b);
+        else
+        System.out.println(a+b+a);
+    }
+}
+
+
+Given a string, if the first or last chars are 'x', return the string without those 'x' chars, and
+otherwise return the string unchanged. If the input is "xHix", then output is "Hi".
+
+
+
+public class removing
+{
+ public static void main(String[] args)
+ {
+   String str="xhix";
+   int l=str.length();
+   String s="";
+   if((str.charAt(0)=='x'||str.charAt(0)=='X')&&(str.charAt(l)=='x'||str.charAt(l)=='X'))
+   {
+    s=str.substring(1,l);
+    return s;
+   }
+   else
+   {
+    return str;
+   }
+  }
+ }
+
+
